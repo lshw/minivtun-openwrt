@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=minivtun
-PKG_VERSION:=1.0.20230708
-PKG_RELEASE:=2023-07-08
+PKG_VERSION:=1.0.20240722
+PKG_RELEASE:=2024-07-22
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/rssnsj/minivtun.git
-PKG_SOURCE_VERSION:=d7007bd
+PKG_SOURCE_URL:=https://github.com/lshw/minivtun.git
+PKG_SOURCE_VERSION:=7dac3f8
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.xz
 
@@ -26,7 +26,7 @@ define Package/minivtun
 	CATEGORY:=Network
 	TITLE:=A simple tun based on openssl
 	URL:=https://github.com/rssnsj/minivtun
-	DEPENDS:=+kmod-tun +ip +libopenssl
+	DEPENDS:=+kmod-tun +ip +libmbedtls
 endef
 
 define Package/minivtun/description
