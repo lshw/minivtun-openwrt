@@ -26,7 +26,7 @@ define Package/minivtun
 	CATEGORY:=Network
 	TITLE:=A simple tun based on openssl
 	URL:=https://github.com/rssnsj/minivtun
-	DEPENDS:=+kmod-tun +ip +libopenssl
+	DEPENDS:=+ip +libopenssl
 endef
 
 define Package/minivtun/description
